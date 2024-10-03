@@ -1,0 +1,165 @@
+[
+    {
+      "Sector": "Coal mining",
+      "Year": "2020-21",
+      "Employment at end June": 38693,
+      "Wages and salaries ($m)": 6005,
+      "Sales and service income ($m)": 53906,
+      "Total income ($m)": 53304,
+      "Total expenses ($m)": 57034
+    },
+    {
+      "Sector": "Coal mining",
+      "Year": "2021-22",
+      "Employment at end June": 38850,
+      "Wages and salaries ($m)": 6156,
+      "Sales and service income ($m)": 105696,
+      "Total income ($m)": 108734,
+      "Total expenses ($m)": 67354
+    },
+    {
+      "Sector": "Coal mining",
+      "Year": "2022-23",
+      "Employment at end June": 42521,
+      "Wages and salaries ($m)": 6832,
+      "Sales and service income ($m)": 152698,
+      "Total income ($m)": 163013,
+      "Total expenses ($m)": 90574
+    },
+    {
+      "Sector": "Oil and gas extraction",
+      "Year": "2020-21",
+      "Employment at end June": 17293,
+      "Wages and salaries ($m)": 3772,
+      "Sales and service income ($m)": 57318,
+      "Total income ($m)": 42118,
+      "Total expenses ($m)": 55158
+    },
+    {
+      "Sector": "Oil and gas extraction",
+      "Year": "2021-22",
+      "Employment at end June": 17367,
+      "Wages and salaries ($m)": 3637,
+      "Sales and service income ($m)": 84188,
+      "Total income ($m)": 92009,
+      "Total expenses ($m)": 58821
+    },
+    {
+      "Sector": "Oil and gas extraction",
+      "Year": "2022-23",
+      "Employment at end June": 18228,
+      "Wages and salaries ($m)": 4010,
+      "Sales and service income ($m)": 131462,
+      "Total income ($m)": 149324,
+      "Total expenses ($m)": 73499
+    },
+    {
+      "Sector": "Metal ore mining",
+      "Year": "2020-21",
+      "Employment at end June": 79625,
+      "Wages and salaries ($m)": 12442,
+      "Sales and service income ($m)": 208075,
+      "Total income ($m)": 214116,
+      "Total expenses ($m)": 103555
+    },
+    {
+      "Sector": "Metal ore mining",
+      "Year": "2021-22",
+      "Employment at end June": 87195,
+      "Wages and salaries ($m)": 13660,
+      "Sales and service income ($m)": 212322,
+      "Total income ($m)": 221086,
+      "Total expenses ($m)": 115708
+    },
+    {
+      "Sector": "Metal ore mining",
+      "Year": "2022-23",
+      "Employment at end June": 93943,
+      "Wages and salaries ($m)": 15420,
+      "Sales and service income ($m)": 198083,
+      "Total income ($m)": 205821,
+      "Total expenses ($m)": 124998
+    },
+    {
+      "Sector": "Non-metallic mineral mining and quarrying",
+      "Year": "2020-21",
+      "Employment at end June": 12842,
+      "Wages and salaries ($m)": 1229,
+      "Sales and service income ($m)": 8076,
+      "Total income ($m)": 8226,
+      "Total expenses ($m)": 7248
+    },
+    {
+      "Sector": "Non-metallic mineral mining and quarrying",
+      "Year": "2021-22",
+      "Employment at end June": 12982,
+      "Wages and salaries ($m)": 1336,
+      "Sales and service income ($m)": 10206,
+      "Total income ($m)": 10492,
+      "Total expenses ($m)": 8627
+    },
+    {
+      "Sector": "Non-metallic mineral mining and quarrying",
+      "Year": "2022-23",
+      "Employment at end June": 15640,
+      "Wages and salaries ($m)": 1547,
+      "Sales and service income ($m)": 21091,
+      "Total income ($m)": 21816,
+      "Total expenses ($m)": 11778
+    },
+    {
+      "Sector": "Exploration and other mining support services",
+      "Year": "2020-21",
+      "Employment at end June": 40674,
+      "Wages and salaries ($m)": 4825,
+      "Sales and service income ($m)": 15849,
+      "Total income ($m)": 18255,
+      "Total expenses ($m)": 16951
+    },
+    {
+      "Sector": "Exploration and other mining support services",
+      "Year": "2021-22",
+      "Employment at end June": 45294,
+      "Wages and salaries ($m)": 6059,
+      "Sales and service income ($m)": 18818,
+      "Total income ($m)": 20388,
+      "Total expenses ($m)": 19777
+    },
+    {
+      "Sector": "Exploration and other mining support services",
+      "Year": "2022-23",
+      "Employment at end June": 49168,
+      "Wages and salaries ($m)": 6607,
+      "Sales and service income ($m)": 21230,
+      "Total income ($m)": 21590,
+      "Total expenses ($m)": 23150
+    },
+    {
+      "Sector": "Total Mining",
+      "Year": "2020-21",
+      "Employment at end June": 189127,
+      "Wages and salaries ($m)": 28273,
+      "Sales and service income ($m)": 343224,
+      "Total income ($m)": 336018,
+      "Total expenses ($m)": 239947
+    },
+    {
+      "Sector": "Total Mining",
+      "Year": "2021-22",
+      "Employment at end June": 201689,
+      "Wages and salaries ($m)": 30849,
+      "Sales and service income ($m)": 431231,
+      "Total income ($m)": 452710,
+      "Total expenses ($m)": 270286
+    },
+    {
+      "Sector": "Total Mining",
+      "Year": "2022-23",
+      "Employment at end June": 219501,
+      "Wages and salaries ($m)": 34416,
+      "Sales and service income ($m)": 524564,
+      "Total income ($m)": 561563,
+      "Total expenses ($m)": 323999
+    }
+  ]
+  
