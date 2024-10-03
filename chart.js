@@ -5,11 +5,9 @@ const chart = {
     "height": 500,
     "padding": 60,
     "autosize": {"type": "none", "contains": "padding"},
-    
     "signals": [
       {"name": "radius", "update": "width / 2"}
     ],
-    
     "data": [
       {
         "name": "table",
@@ -18,7 +16,7 @@ const chart = {
         "transform": [
           {
             "type": "filter",
-            "expr": "datum['Employment_at_end_June'] != null"
+            "expr": "datum['Employment_at_end_of_June'] != null"
           }
         ]
       },
@@ -33,7 +31,6 @@ const chart = {
         ]
       }
     ],
-    
     "scales": [
       {
         "name": "angular",
@@ -48,7 +45,7 @@ const chart = {
         "range": {"signal": "[0, radius]"},
         "zero": true,
         "nice": false,
-        "domain": {"data": "table", "field": "Employment_at_end_June"},
+        "domain": {"data": "table", "field": "Employment_at_end_of_June"},
         "domainMin": 0
       },
       {
@@ -58,14 +55,12 @@ const chart = {
         "range": {"scheme": "category10"}
       }
     ],
-    
     "encode": {
       "enter": {
         "x": {"signal": "radius"},
         "y": {"signal": "radius"}
       }
     },
-    
     "marks": [
       {
         "type": "group",
@@ -82,8 +77,8 @@ const chart = {
             "encode": {
               "enter": {
                 "interpolate": {"value": "linear-closed"},
-                "x": {"signal": "scale('radial', datum['Employment_at_end_June']) * cos(scale('angular', datum.Region))"},
-                "y": {"signal": "scale('radial', datum['Employment_at_end_June']) * sin(scale('angular', datum.Region))"},
+                "x": {"signal": "scale('radial', datum['Employment_at_end_of_June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment_at_end_of_June']) * sin(scale('angular', datum.Region))"},
                 "stroke": {"scale": "color", "field": "Year"},
                 "strokeWidth": {"value": 1},
                 "fill": {"scale": "color", "field": "Year"},
@@ -98,13 +93,13 @@ const chart = {
             "encode": {
               "enter": {
                 "size": {"value": 50},
-                "x": {"signal": "scale('radial', datum['Employment_at_end_June']) * cos(scale('angular', datum.Region))"},
-                "y": {"signal": "scale('radial', datum['Employment_at_end_June']) * sin(scale('angular', datum.Region))"},
+                "x": {"signal": "scale('radial', datum['Employment_at_end_of_June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment_at_end_of_June']) * sin(scale('angular', datum.Region))"},
                 "fill": {"scale": "color", "field": "Year"},
                 "stroke": {"value": "black"},
                 "strokeWidth": {"value": 1},
                 "tooltip": {
-                  "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment_at_end_June']}"
+                  "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment_at_end_of_June']}"
                 }
               }
             }
@@ -177,6 +172,7 @@ const chart = {
         }
       }
     ]
-  };
+  }
+  
   
   vegaEmbed('#chart', chart);

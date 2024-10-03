@@ -145,26 +145,5 @@
     "Employment_at_end_of_June": 3627,
     "Wages_and_salaries": 637,
     "Sales_and_service_income": 15615
-  },
-  {
-    "Region": "Australia",
-    "Year": "2020-21",
-    "Employment_at_end_of_June": 148453,
-    "Wages_and_salaries": 23448,
-    "Sales_and_service_income": 327375
-  },
-  {
-    "Region": "Australia",
-    "Year": "2021-22",
-    "Employment_at_end_of_June": 156395,
-    "Wages_and_salaries": 24790,
-    "Sales_and_service_income": 412413
-  },
-  {
-    "Region": "Australia",
-    "Year": "2022-23",
-    "Employment_at_end_of_June": 170332,
-    "Wages_and_salaries": 27809,
-    "Sales_and_service_income": 503333
   }
 ]
