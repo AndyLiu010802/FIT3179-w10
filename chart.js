@@ -18,7 +18,7 @@ const chart = {
         "transform": [
           {
             "type": "filter",
-            "expr": "datum['Employment at end June'] != null"
+            "expr": "datum['Employment_at_end_June'] != null"
           }
         ]
       },
@@ -48,7 +48,7 @@ const chart = {
         "range": {"signal": "[0, radius]"},
         "zero": true,
         "nice": false,
-        "domain": {"data": "table", "field": "Employment at end June"},
+        "domain": {"data": "table", "field": "Employment_at_end_June"},
         "domainMin": 0
       },
       {
@@ -82,8 +82,8 @@ const chart = {
             "encode": {
               "enter": {
                 "interpolate": {"value": "linear-closed"},
-                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Region))"},
-                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Region))"},
+                "x": {"signal": "scale('radial', datum['Employment_at_end_June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment_at_end_June']) * sin(scale('angular', datum.Region))"},
                 "stroke": {"scale": "color", "field": "Year"},
                 "strokeWidth": {"value": 1},
                 "fill": {"scale": "color", "field": "Year"},
@@ -98,13 +98,13 @@ const chart = {
             "encode": {
               "enter": {
                 "size": {"value": 50},
-                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Region))"},
-                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Region))"},
+                "x": {"signal": "scale('radial', datum['Employment_at_end_June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment_at_end_June']) * sin(scale('angular', datum.Region))"},
                 "fill": {"scale": "color", "field": "Year"},
                 "stroke": {"value": "black"},
                 "strokeWidth": {"value": 1},
                 "tooltip": {
-                  "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment at end June']}"
+                  "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment_at_end_June']}"
                 }
               }
             }
