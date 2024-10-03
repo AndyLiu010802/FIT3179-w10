@@ -8,13 +8,69 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #feecc2;
+        }
+
+        .tab-container {
+            display: flex;
+            border-radius: 20px;
+            padding: 5px;
+            justify-content: space-around;
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: transparent;
+            color: #3c51a3;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #4f7eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        .tab:hover {
+            background-color: #5f8fed;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Austrlia Mining Commodity Distribution</h1>
+
+
     <div id="chart"></div>
 
+    <div class="tab-container"></div>
+    <label for="yearSelection">Select Year:</label>
+    <div class="tab" id="tab1" onclick="selectTab('tab1')">2020-2021</div>
+    <div class="tab" id="tab2" onclick="selectTab('tab2')">2021-2022</div>
+    <div class="tab active" id="tab3" onclick="selectTab('tab3')">2022-2023</div>
+    </div>
+
+
     <script src="chart.js"></script>
+    <script>
+        function selectTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 
 </html>

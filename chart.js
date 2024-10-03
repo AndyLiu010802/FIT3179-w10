@@ -3,7 +3,7 @@ const chart = {
     "description": "Radar chart",
     "width": 500,
     "height": 500,
-    "padding": 60,
+    "padding": 100,
     "autosize": {"type": "none", "contains": "padding"},
     "signals": [
       {"name": "radius", "update": "width / 2"}
