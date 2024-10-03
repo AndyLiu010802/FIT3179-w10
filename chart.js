@@ -1,10 +1,9 @@
-const chart=
-{
+const chart = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "description": "Radar chart for Mining Sector Employment at end June, with each sector represented as a radial point.",
-    "width": 400,
-    "height": 400,
-    "padding": 40,
+    "description": "Radar chart with dots and tooltips.",
+    "width": 500,
+    "height": 500,
+    "padding": 60,
     "autosize": {"type": "none", "contains": "padding"},
     
     "signals": [
@@ -93,17 +92,20 @@ const chart=
             }
           },
           {
-            "type": "text",
-            "name": "value-text",
-            "from": {"data": "category-line"},
+            "type": "symbol",
+            "name": "category-point",
+            "from": {"data": "facet"},
             "encode": {
               "enter": {
-                "x": {"signal": "datum.x"},
-                "y": {"signal": "datum.y"},
-                "text": {"signal": "datum.datum['Employment at end June']"},
-                "align": {"value": "center"},
-                "baseline": {"value": "middle"},
-                "fill": {"value": "black"}
+                "size": {"value": 50},
+                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Sector))"},
+                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Sector))"},
+                "fill": {"scale": "color", "field": "Year"},
+                "stroke": {"value": "black"},
+                "strokeWidth": {"value": 1},
+                "tooltip": {
+                  "signal": "{'Sector': datum.Sector, 'Year': datum.Year, 'Employment': datum['Employment at end June']}"
+                }
               }
             }
           }
@@ -176,7 +178,6 @@ const chart=
       }
     ]
   }
-  
   
   vegaEmbed('#chart', chart);
   

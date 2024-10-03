@@ -1,138 +1,99 @@
 [
     {
-      "Sector": "Coal mining",
-      "Year": "2020-21",
-      "Employment at end June": 38693,
-      "Wages and salaries ($m)": 6005,
-      "Sales and service income ($m)": 53906,
-      "Total income ($m)": 53304,
-      "Total expenses ($m)": 57034
+      "Region": "New South Wales/Australian Capital Territory",
+      "2020-21_Employment_at_end_of_June": 23014,
+      "2020-21_Wages_and_salaries": 3327,
+      "2020-21_Sales_and_service_income": 30117,
+      "2021-22_Employment_at_end_of_June": 23329,
+      "2021-22_Wages_and_salaries": 3416,
+      "2021-22_Sales_and_service_income": 48387,
+      "2022-23_Employment_at_end_of_June": 24720,
+      "2022-23_Wages_and_salaries": 3719,
+      "2022-23_Sales_and_service_income": 74589
     },
     {
-      "Sector": "Coal mining",
-      "Year": "2021-22",
-      "Employment at end June": 38850,
-      "Wages and salaries ($m)": 6156,
-      "Sales and service income ($m)": 105696,
-      "Total income ($m)": 108734,
-      "Total expenses ($m)": 67354
+      "Region": "Victoria",
+      "2020-21_Employment_at_end_of_June": 5571,
+      "2020-21_Wages_and_salaries": 922,
+      "2020-21_Sales_and_service_income": 7413,
+      "2021-22_Employment_at_end_of_June": 5862,
+      "2021-22_Wages_and_salaries": 878,
+      "2021-22_Sales_and_service_income": 9368,
+      "2022-23_Employment_at_end_of_June": 5568,
+      "2022-23_Wages_and_salaries": 850,
+      "2022-23_Sales_and_service_income": 9301
     },
     {
-      "Sector": "Coal mining",
-      "Year": "2022-23",
-      "Employment at end June": 42521,
-      "Wages and salaries ($m)": 6832,
-      "Sales and service income ($m)": 152698,
-      "Total income ($m)": 163013,
-      "Total expenses ($m)": 90574
+      "Region": "Queensland",
+      "2020-21_Employment_at_end_of_June": 36616,
+      "2020-21_Wages_and_salaries": 5453,
+      "2020-21_Sales_and_service_income": 56196,
+      "2021-22_Employment_at_end_of_June": 35781,
+      "2021-22_Wages_and_salaries": 5461,
+      "2021-22_Sales_and_service_income": 96862,
+      "2022-23_Employment_at_end_of_June": 39421,
+      "2022-23_Wages_and_salaries": 6110,
+      "2022-23_Sales_and_service_income": 126968
     },
     {
-      "Sector": "Oil and gas extraction",
-      "Year": "2020-21",
-      "Employment at end June": 17293,
-      "Wages and salaries ($m)": 3772,
-      "Sales and service income ($m)": 57318,
-      "Total income ($m)": 42118,
-      "Total expenses ($m)": 55158
+      "Region": "South Australia",
+      "2020-21_Employment_at_end_of_June": 8174,
+      "2020-21_Wages_and_salaries": 1223,
+      "2020-21_Sales_and_service_income": 8801,
+      "2021-22_Employment_at_end_of_June": 9018,
+      "2021-22_Wages_and_salaries": 1330,
+      "2021-22_Sales_and_service_income": 9491,
+      "2022-23_Employment_at_end_of_June": 9494,
+      "2022-23_Wages_and_salaries": 1480,
+      "2022-23_Sales_and_service_income": 10978
     },
     {
-      "Sector": "Oil and gas extraction",
-      "Year": "2021-22",
-      "Employment at end June": 17367,
-      "Wages and salaries ($m)": 3637,
-      "Sales and service income ($m)": 84188,
-      "Total income ($m)": 92009,
-      "Total expenses ($m)": 58821
+      "Region": "Western Australia",
+      "2020-21_Employment_at_end_of_June": 70133,
+      "2020-21_Wages_and_salaries": 11758,
+      "2020-21_Sales_and_service_income": 214604,
+      "2021-22_Employment_at_end_of_June": 77255,
+      "2021-22_Wages_and_salaries": 12941,
+      "2021-22_Sales_and_service_income": 234379,
+      "2022-23_Employment_at_end_of_June": 85746,
+      "2022-23_Wages_and_salaries": 14798,
+      "2022-23_Sales_and_service_income": 264468
     },
     {
-      "Sector": "Oil and gas extraction",
-      "Year": "2022-23",
-      "Employment at end June": 18228,
-      "Wages and salaries ($m)": 4010,
-      "Sales and service income ($m)": 131462,
-      "Total income ($m)": 149324,
-      "Total expenses ($m)": 73499
+      "Region": "Tasmania",
+      "2020-21_Employment_at_end_of_June": 1647,
+      "2020-21_Wages_and_salaries": 200,
+      "2020-21_Sales_and_service_income": 1084,
+      "2021-22_Employment_at_end_of_June": 1693,
+      "2021-22_Wages_and_salaries": 207,
+      "2021-22_Sales_and_service_income": 1450,
+      "2022-23_Employment_at_end_of_June": 1757,
+      "2022-23_Wages_and_salaries": 215,
+      "2022-23_Sales_and_service_income": 1415
     },
     {
-      "Sector": "Metal ore mining",
-      "Year": "2020-21",
-      "Employment at end June": 79625,
-      "Wages and salaries ($m)": 12442,
-      "Sales and service income ($m)": 208075,
-      "Total income ($m)": 214116,
-      "Total expenses ($m)": 103555
+      "Region": "Northern Territory",
+      "2020-21_Employment_at_end_of_June": 3298,
+      "2020-21_Wages_and_salaries": 564,
+      "2020-21_Sales_and_service_income": 9161,
+      "2021-22_Employment_at_end_of_June": 3457,
+      "2021-22_Wages_and_salaries": 557,
+      "2021-22_Sales_and_service_income": 12476,
+      "2022-23_Employment_at_end_of_June": 3627,
+      "2022-23_Wages_and_salaries": 637,
+      "2022-23_Sales_and_service_income": 15615
     },
     {
-      "Sector": "Metal ore mining",
-      "Year": "2021-22",
-      "Employment at end June": 87195,
-      "Wages and salaries ($m)": 13660,
-      "Sales and service income ($m)": 212322,
-      "Total income ($m)": 221086,
-      "Total expenses ($m)": 115708
-    },
-    {
-      "Sector": "Metal ore mining",
-      "Year": "2022-23",
-      "Employment at end June": 93943,
-      "Wages and salaries ($m)": 15420,
-      "Sales and service income ($m)": 198083,
-      "Total income ($m)": 205821,
-      "Total expenses ($m)": 124998
-    },
-    {
-      "Sector": "Non-metallic mineral mining and quarrying",
-      "Year": "2020-21",
-      "Employment at end June": 12842,
-      "Wages and salaries ($m)": 1229,
-      "Sales and service income ($m)": 8076,
-      "Total income ($m)": 8226,
-      "Total expenses ($m)": 7248
-    },
-    {
-      "Sector": "Non-metallic mineral mining and quarrying",
-      "Year": "2021-22",
-      "Employment at end June": 12982,
-      "Wages and salaries ($m)": 1336,
-      "Sales and service income ($m)": 10206,
-      "Total income ($m)": 10492,
-      "Total expenses ($m)": 8627
-    },
-    {
-      "Sector": "Non-metallic mineral mining and quarrying",
-      "Year": "2022-23",
-      "Employment at end June": 15640,
-      "Wages and salaries ($m)": 1547,
-      "Sales and service income ($m)": 21091,
-      "Total income ($m)": 21816,
-      "Total expenses ($m)": 11778
-    },
-    {
-      "Sector": "Exploration and other mining support services",
-      "Year": "2020-21",
-      "Employment at end June": 40674,
-      "Wages and salaries ($m)": 4825,
-      "Sales and service income ($m)": 15849,
-      "Total income ($m)": 18255,
-      "Total expenses ($m)": 16951
-    },
-    {
-      "Sector": "Exploration and other mining support services",
-      "Year": "2021-22",
-      "Employment at end June": 45294,
-      "Wages and salaries ($m)": 6059,
-      "Sales and service income ($m)": 18818,
-      "Total income ($m)": 20388,
-      "Total expenses ($m)": 19777
-    },
-    {
-      "Sector": "Exploration and other mining support services",
-      "Year": "2022-23",
-      "Employment at end June": 49168,
-      "Wages and salaries ($m)": 6607,
-      "Sales and service income ($m)": 21230,
-      "Total income ($m)": 21590,
-      "Total expenses ($m)": 23150
+      "Region": "Australia",
+      "2020-21_Employment_at_end_of_June": 148453,
+      "2020-21_Wages_and_salaries": 23448,
+      "2020-21_Sales_and_service_income": 327375,
+      "2021-22_Employment_at_end_of_June": 156395,
+      "2021-22_Wages_and_salaries": 24790,
+      "2021-22_Sales_and_service_income": 412413,
+      "2022-23_Employment_at_end_of_June": 170332,
+      "2022-23_Wages_and_salaries": 27809,
+      "2022-23_Sales_and_service_income": 503333
     }
   ]
   
