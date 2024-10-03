@@ -1,6 +1,6 @@
 const chart = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "description": "Radar chart with dots and tooltips.",
+    "description": "Radar chart",
     "width": 500,
     "height": 500,
     "padding": 60,
@@ -28,7 +28,7 @@ const chart = {
         "transform": [
           {
             "type": "aggregate",
-            "groupby": ["Sector"]
+            "groupby": ["Region"]
           }
         ]
       }
@@ -40,7 +40,7 @@ const chart = {
         "type": "point",
         "range": {"signal": "[-PI, PI]"},
         "padding": 0.5,
-        "domain": {"data": "table", "field": "Sector"}
+        "domain": {"data": "table", "field": "Region"}
       },
       {
         "name": "radial",
@@ -82,8 +82,8 @@ const chart = {
             "encode": {
               "enter": {
                 "interpolate": {"value": "linear-closed"},
-                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Sector))"},
-                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Sector))"},
+                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Region))"},
                 "stroke": {"scale": "color", "field": "Year"},
                 "strokeWidth": {"value": 1},
                 "fill": {"scale": "color", "field": "Year"},
@@ -98,13 +98,13 @@ const chart = {
             "encode": {
               "enter": {
                 "size": {"value": 50},
-                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Sector))"},
-                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Sector))"},
+                "x": {"signal": "scale('radial', datum['Employment at end June']) * cos(scale('angular', datum.Region))"},
+                "y": {"signal": "scale('radial', datum['Employment at end June']) * sin(scale('angular', datum.Region))"},
                 "fill": {"scale": "color", "field": "Year"},
                 "stroke": {"value": "black"},
                 "strokeWidth": {"value": 1},
                 "tooltip": {
-                  "signal": "{'Sector': datum.Sector, 'Year': datum.Year, 'Employment': datum['Employment at end June']}"
+                  "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment at end June']}"
                 }
               }
             }
@@ -120,8 +120,8 @@ const chart = {
           "enter": {
             "x": {"value": 0},
             "y": {"value": 0},
-            "x2": {"signal": "radius * cos(scale('angular', datum.Sector))"},
-            "y2": {"signal": "radius * sin(scale('angular', datum.Sector))"},
+            "x2": {"signal": "radius * cos(scale('angular', datum.Region))"},
+            "y2": {"signal": "radius * sin(scale('angular', datum.Region))"},
             "stroke": {"value": "lightgray"},
             "strokeWidth": {"value": 1}
           }
@@ -134,12 +134,12 @@ const chart = {
         "zindex": 1,
         "encode": {
           "enter": {
-            "x": {"signal": "(radius + 5) * cos(scale('angular', datum.Sector))"},
-            "y": {"signal": "(radius + 5) * sin(scale('angular', datum.Sector))"},
-            "text": {"field": "Sector"},
+            "x": {"signal": "(radius + 5) * cos(scale('angular', datum.Region))"},
+            "y": {"signal": "(radius + 5) * sin(scale('angular', datum.Region))"},
+            "text": {"field": "Region"},
             "align": [
               {
-                "test": "abs(scale('angular', datum.Sector)) > PI / 2",
+                "test": "abs(scale('angular', datum.Region)) > PI / 2",
                 "value": "right"
               },
               {
@@ -148,10 +148,10 @@ const chart = {
             ],
             "baseline": [
               {
-                "test": "scale('angular', datum.Sector) > 0", "value": "top"
+                "test": "scale('angular', datum.Region) > 0", "value": "top"
               },
               {
-                "test": "scale('angular', datum.Sector) == 0", "value": "middle"
+                "test": "scale('angular', datum.Region) == 0", "value": "middle"
               },
               {
                 "value": "bottom"
@@ -177,7 +177,6 @@ const chart = {
         }
       }
     ]
-  }
+  };
   
   vegaEmbed('#chart', chart);
-  
