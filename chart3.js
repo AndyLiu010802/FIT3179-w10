@@ -1,180 +1,196 @@
-// const chart3 = {
-//     "$schema": "https://vega.github.io/schema/vega/v5.json",
-//     "description": "Radar chart with hexagonal grid",
-//     "width": 500,
-//     "height": 500,
-//     "padding": 100,
-//     "autosize": { "type": "none", "contains": "padding" },
-//     "signals": [{ "name": "radius", "update": "width / 2" }],
-    
-//     "scales": [
-//         {
-//             "name": "angular",
-//             "type": "point",
-//             "range": { "signal": "[-PI, PI]" },
-//             "padding": 0.5,
-//             "domain": { "data": "table", "field": "Region" }
-//         },
-//         {
-//             "name": "radial",
-//             "type": "linear",
-//             "range": { "signal": "[0, radius]" },
-//             "zero": true,
-//             "nice": false,
-//             "domain": { "data": "table", "field": "Sales_and_service_income" },
-//             "domainMin": 0
-//         },
-//         {
-//             "name": "color",
-//             "type": "ordinal",
-//             "domain": ["2020-21", "2021-22", "2022-23"],  
-//             "range": ["#3b7dc4", "#cf4730", "#6ca13b"]  
-//         }
-//     ],
-//     "legends": [
-//         {
-//             "fill": "color", 
-//             "title": "Year",
-//             "orient": "right",
-//             "labelFontSize": 12,  
-//             "titleFontSize": 14  
-//         }
-//     ],
-//     "encode": { "enter": { "x": { "signal": "radius" }, "y": { "signal": "radius" } } },
-//     "marks": [
-//         {
-//             "type": "group",
-//             "name": "categories",
-//             "zindex": 1,
-//             "from": { "facet": { "data": "table", "name": "facet", "groupby": ["Year"] } },
-//             "marks": [
-//                 {
-//                     "type": "line",
-//                     "name": "category-line",
-//                     "from": { "data": "facet" },
-//                     "encode": {
-//                         "enter": {
-//                             "interpolate": { "value": "linear-closed" },
-//                             "x": { "signal": "scale('radial', datum['Sales_and_service_income']) * cos(scale('angular', datum.Region))" },
-//                             "y": { "signal": "scale('radial', datum['Sales_and_service_income']) * sin(scale('angular', datum.Region))" },
-//                             "stroke": { "scale": "color", "field": "Year" },
-//                             "strokeWidth": { "value": 1 },
-//                             "fill": { "scale": "color", "field": "Year" },
-//                             "fillOpacity": { "value": 0.2 }
-//                         }
-//                     }
-//                 },
-//                 {
-//                     "type": "symbol",
-//                     "name": "category-point",
-//                     "from": { "data": "facet" },
-//                     "encode": {
-//                         "enter": {
-//                             "size": { "value": 50 },
-//                             "x": { "signal": "scale('radial', datum['Sales_and_service_income']) * cos(scale('angular', datum.Region))" },
-//                             "y": { "signal": "scale('radial', datum['Sales_and_service_income']) * sin(scale('angular', datum.Region))" },
-//                             "fill": { "scale": "color", "field": "Year" },
-//                             "stroke": { "value": "black" },
-//                             "strokeWidth": { "value": 1 },
-//                             "tooltip": { "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Sales and service income': datum['Sales_and_service_income']}" }
-//                         }
-//                     }
-//                 }
-//             ]
-//         },
-     
-//         {
-//             "type": "line",
-//             "name": "hex-grid",
-//             "from": { "data": "keys" },
-//             "encode": {
-//                 "enter": {
-//                     "interpolate": { "value": "linear-closed" },
-//                     "x": { "signal": "radius * cos(scale('angular', datum.Region))" },
-//                     "y": { "signal": "radius * sin(scale('angular', datum.Region))" },
-//                     "stroke": { "value": "darkgray" },
-//                     "strokeWidth": { "value": 1 }
-//                 }
-//             }
-//         },
-//         {
-//             "type": "rule",
-//             "name": "radial-grid",
-//             "from": { "data": "keys" },
-//             "zindex": 0,
-//             "encode": {
-//                 "enter": {
-//                     "x": { "value": 0 },
-//                     "y": { "value": 0 },
-//                     "x2": { "signal": "radius * cos(scale('angular', datum.Region))" },
-//                     "y2": { "signal": "radius * sin(scale('angular', datum.Region))" },
-//                     "stroke": { "value": "darkgray" },
-//                     "strokeWidth": { "value": 1 }
-//                 }
-//             }
-//         },
-//         {
-//             "type": "text",
-//             "name": "key-label",
-//             "from": { "data": "keys" },
-//             "zindex": 1,
-//             "encode": {
-//                 "enter": {
-//                     "x": { "signal": "(radius + 5) * cos(scale('angular', datum.Region))" },
-//                     "y": { "signal": "(radius + 5) * sin(scale('angular', datum.Region))" },
-//                     "text": { "field": "Region" },
-//                     "align": [
-//                         { "test": "abs(scale('angular', datum.Region)) > PI / 2", "value": "right" },
-//                         { "value": "left" }
-//                     ],
-//                     "baseline": [
-//                         { "test": "scale('angular', datum.Region) > 0", "value": "top" },
-//                         { "test": "scale('angular', datum.Region) == 0", "value": "middle" },
-//                         { "value": "bottom" }
-//                     ],
-//                     "fill": { "value": "black" },
-//                     "fontWeight": { "value": "bold" }
-//                 }
-//             }
-//         },
+const chartSpec3 = (selectedKey, selectedRegion3) => {
+    let domainMax;
+    if  (selectedKey === 'Employment at end of June') {
+        domainMax = 86000; 
+    } else if (selectedKey === 'Wages and salaries') {
+        domainMax = 15000; 
+    } else if (selectedKey === 'Sales and service income') {
+        domainMax = 300000;  
+    } 
+
+    return {
+        "$schema": "https://vega.github.io/schema/vega/v5.json",
+        "description": "Radar chart using keys as radial points and values as radial distances",
+        "width": 460,
+        "height": 350,
+        "padding": { "top": 150, "left": 200, "right": 50, "bottom": 50 },
+        "autosize": { "type": "none", "contains": "padding" },
+        "signals": [{ "name": "radius", "update": "width / 2" }],
+        "data": [
+            {
+                "name": "table",
+                "url": "https://raw.githubusercontent.com/AndyLiu010802/FIT3179-w10/main/data.json",
+                "format": {"type": "json"},
+                "transform": [
+                    {
+                        "type": "filter",
+                        "expr": (selectedKey === "All" ? 
+                                `datum.Region === '${selectedRegion3}'` :
+                                `datum.key === '${selectedKey}' && datum.Region === '${selectedRegion3}'`)
+                    }
+                ]
+            },
+            {
+                "name": "years",
+                "source": "table",
+                "transform": [
+                    {
+                        "type": "aggregate",
+                        "groupby": ["Year"]
+                    }
+                ]
+            }
+            
+        ],
         
-//     ],
-// };
+        "scales": [
+            {
+                "name": "angular",
+                "type": "point",
+                "range": {"signal": "[-PI, PI]"},
+                "padding": 0.5,
+                "domain": {"data": "years", "field": "Year"}  
+            },
+            {
+                "name": "radial",
+                "type": "linear",
+                "range": {"signal": "[0, radius]"},
+                "zero": true,
+                "nice": false,
+                "domain": {"data": "table", "field": "value"}, 
+                "domainMin": 0,
+                "domainMax": domainMax
+            },
+            {
+                "name": "color",
+                "type": "ordinal",
+                "domain": ["Employment at end of June", "Wages and salaries", "Sales and service income"],  
+                "range": ["#3b7dc4", "#cf4730", "#6ca13b"]  
+            }
+        ],
+        "marks": [
+            
+            // Radar chart points and lines
+            {
+                "type": "group",
+                "name": "categories",
+                "zindex": 1,
+                "from": { "facet": { "data": "table", "name": "facet", "groupby": ["key"] } },
+                "marks": [
+                    {
+                        "type": "line",
+                        "name": "category-line",
+                        "from": { "data": "facet" },
+                        "encode": {
+                            "enter": {
+                                "interpolate": { "value": "linear-closed" },
+                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.Year))" },
+                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.Year))" },
+                                "stroke": { "scale": "color", "field": "key" },
+                                "strokeWidth": { "value": 1 },
+                                "fill": { "scale": "color", "field": "key" },
+                                "fillOpacity": { "value": 0.2 }
+                            }
+                        }
+                    },
+                    {
+                        "type": "symbol",
+                        "name": "category-point",
+                        "from": { "data": "facet" },
+                        "encode": {
+                            "enter": {
+                                "size": { "value": 50 },
+                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.Year))" },
+                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.Year))" },
+                                "fill": { "scale": "color", "field": "key" },
+                                "stroke": { "value": "black" },
+                                "strokeWidth": { "value": 1 },
+                                "tooltip": { "signal": "{'Region': datum.Region, 'Sector': datum.key, 'Value': datum.value}" }
+                            }
+                        }
+                    }
+                ]
+            },
+            // Concentric circular grid lines
+            {
+                "type": "rule",
+                "name": "radial-grid",
+                "from": { "data": "years" },
+                "zindex": 0,
+                "encode": {
+                    "enter": {
+                        "x": { "value": 0 },
+                        "y": { "value": 0 },
+                        "x2": { "signal": "radius * cos(scale('angular', datum.Year))" },
+                        "y2": { "signal": "radius * sin(scale('angular', datum.Year))" },
+                        "stroke": { "value": "darkgray" },
+                        "strokeWidth": { "value": 1 }
+                    }
+                }
+            },
+            // Radial grid lines
+            {
+                "type": "line",
+                "name": "hex-grid",
+                "from": { "data": "years" },
+                "encode": {
+                    "enter": {
+                        "interpolate": { "value": "linear-closed" },
+                        "x": { "signal": "radius * cos(scale('angular', datum.Year))" },
+                        "y": { "signal": "radius * sin(scale('angular', datum.Year))" },
+                        "stroke": { "value": "black" },
+                        "strokeWidth": { "value": 1 }
+                    }
+                }
+            },
+            // Labels for the radial axes
+            {
+                "type": "text",
+                "name": "key-label",
+                "from": { "data": "years" },
+                "zindex": 1,
+                "encode": {
+                    "enter": {
+                        "x": { "signal": "(radius + 5) * cos(scale('angular', datum.Year))" },
+                        "y": { "signal": "(radius + 5) * sin(scale('angular', datum.Year))" },
+                        "text": { "field": "Year" },
+                        "align": [
+                            { "test": "abs(scale('angular', datum.Year)) > PI / 2", "value": "right" },
+                            { "value": "left" }
+                        ],
+                        "baseline": [
+                            { "test": "scale('angular', datum.Year) > 0", "value": "top" },
+                            { "test": "scale('angular', datum.Year) == 0", "value": "middle" },
+                            { "value": "bottom" }
+                        ],
+                        "fill": { "value": "black" },
+                        "fontWeight": { "value": "bold" }
+                    }
+                }
+            }
+        ]
+    };
+};
 
-// function updateChart3(year) {
-//     const updatedSpec = { ...chart3 };
 
-//     if (year === 'All') {
-//         updatedSpec.data = [
-//             {
-//                 "name": "table",
-//                 "url": "https://raw.githubusercontent.com/AndyLiu010802/FIT3179-w10/main/data.json",
-//                 "format": { "type": "json" }
-//             },
-//             {
-//                 "name": "keys",
-//                 "source": "table",
-//                 "transform": [{ "type": "aggregate", "groupby": ["Region"] },
-//             ]
-//             }
-//         ];
-//     } else {
-//         updatedSpec.data = [
-//             {
-//                 "name": "table",
-//                 "url": "https://raw.githubusercontent.com/AndyLiu010802/FIT3179-w10/main/data.json",
-//                 "format": { "type": "json" },
-//                 "transform": [
-//                     { "type": "filter", "expr": `datum['Year'] == '${year}'` }
-//                 ]
-//             },
-//             {
-//                 "name": "keys",
-//                 "source": "table",
-//                 "transform": [{ "type": "aggregate", "groupby": ["Region"] }]
-//             }
-//         ];
-//     }
+let selectedRegion3 = "Queensland";
 
-//     vegaEmbed('#chart3', updatedSpec).catch(console.error);
-// }
+function renderChart3() {
+    vegaEmbed('#chartSpec3', chartSpec3(selectedKey, selectedRegion3)).catch(console.error);
+}
+
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        e.target.classList.add('active');
+        selectedKey = e.target.getAttribute('data-sector');
+        renderChart3();
+    });
+});
+
+document.getElementById('region3').addEventListener('change', (e) => {
+    selectedRegion3 = e.target.value;
+    renderChart3();
+});
+
+renderChart3();

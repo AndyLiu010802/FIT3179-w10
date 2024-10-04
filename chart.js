@@ -1,10 +1,20 @@
-const chartSpec = (selectedYear, selectedRegion) => {
+const chartSpec = (selectedKey, selectedRegion) => {
+    
+    let domainMax;
+    if  (selectedKey === 'Employment at end of June') {
+        domainMax = 86000; 
+    } else if (selectedKey === 'Wages and salaries') {
+        domainMax = 15000; 
+    } else if (selectedKey === 'Sales and service income') {
+        domainMax = 300000;  
+    } 
+
     return {
         "$schema": "https://vega.github.io/schema/vega/v5.json",
         "description": "Radar chart using keys as radial points and values as radial distances",
-        "width": 700,
-        "height": 700,
-        "padding": 250,
+        "width": 460,
+        "height": 350,
+        "padding": { "top": 150, "left": 200, "right": 50, "bottom": 50 },
         "autosize": { "type": "none", "contains": "padding" },
         "signals": [{ "name": "radius", "update": "width / 2" }],
         "data": [
@@ -15,19 +25,19 @@ const chartSpec = (selectedYear, selectedRegion) => {
                 "transform": [
                     {
                         "type": "filter",
-                        "expr": (selectedYear === "All" ? 
+                        "expr": (selectedKey === "All" ? 
                                 `datum.Region === '${selectedRegion}'` :
-                                `datum.Year === '${selectedYear}' && datum.Region === '${selectedRegion}'`)
+                                `datum.key === '${selectedKey}' && datum.Region === '${selectedRegion}'`)
                     }
                 ]
             },
             {
-                "name": "keys",
+                "name": "years",
                 "source": "table",
                 "transform": [
                     {
                         "type": "aggregate",
-                        "groupby": ["key"]
+                        "groupby": ["Year"]
                     }
                 ]
             }
@@ -38,7 +48,7 @@ const chartSpec = (selectedYear, selectedRegion) => {
                 "type": "point",
                 "range": {"signal": "[-PI, PI]"},
                 "padding": 0.5,
-                "domain": {"data": "keys", "field": "key"}  
+                "domain": {"data": "years", "field": "Year"}  
             },
             {
                 "name": "radial",
@@ -47,22 +57,23 @@ const chartSpec = (selectedYear, selectedRegion) => {
                 "zero": true,
                 "nice": false,
                 "domain": {"data": "table", "field": "value"}, 
-                "domainMin": 0
+                "domainMin": 0,
+                "domainMax": domainMax  
             },
             {
                 "name": "color",
                 "type": "ordinal",
-                "domain": ["2020-21", "2021-22", "2022-23"],  
+                "domain": ["Employment at end of June", "Wages and salaries", "Sales and service income"],  
                 "range": ["#3b7dc4", "#cf4730", "#6ca13b"]  
             }
         ],
+
         "marks": [
-            // Radar chart points and lines
             {
                 "type": "group",
                 "name": "categories",
                 "zindex": 1,
-                "from": { "facet": { "data": "table", "name": "facet", "groupby": ["Year"] } },
+                "from": { "facet": { "data": "table", "name": "facet", "groupby": ["key"] } },
                 "marks": [
                     {
                         "type": "line",
@@ -71,11 +82,11 @@ const chartSpec = (selectedYear, selectedRegion) => {
                         "encode": {
                             "enter": {
                                 "interpolate": { "value": "linear-closed" },
-                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))" },
-                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))" },
-                                "stroke": { "scale": "color", "field": "Year" },
+                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.Year))" },
+                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.Year))" },
+                                "stroke": { "scale": "color", "field": "key" },
                                 "strokeWidth": { "value": 1 },
-                                "fill": { "scale": "color", "field": "Year" },
+                                "fill": { "scale": "color", "field": "key" },
                                 "fillOpacity": { "value": 0.2 }
                             }
                         }
@@ -87,67 +98,67 @@ const chartSpec = (selectedYear, selectedRegion) => {
                         "encode": {
                             "enter": {
                                 "size": { "value": 50 },
-                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))" },
-                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))" },
-                                "fill": { "scale": "color", "field": "Year" },
+                                "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.Year))" },
+                                "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.Year))" },
+                                "fill": { "scale": "color", "field": "key" },
                                 "stroke": { "value": "black" },
                                 "strokeWidth": { "value": 1 },
-                                "tooltip": { "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Value': datum.value}" }
+                                "tooltip": { "signal": "{'Region': datum.Region, 'Sector': datum.key, 'Value': datum.value}" }
                             }
                         }
                     }
                 ]
             },
-            // Concentric circular grid lines
+           
             {
                 "type": "rule",
                 "name": "radial-grid",
-                "from": { "data": "keys" },
+                "from": { "data": "years" },
                 "zindex": 0,
                 "encode": {
                     "enter": {
                         "x": { "value": 0 },
                         "y": { "value": 0 },
-                        "x2": { "signal": "radius * cos(scale('angular', datum.key))" },
-                        "y2": { "signal": "radius * sin(scale('angular', datum.key))" },
+                        "x2": { "signal": "radius * cos(scale('angular', datum.Year))" },
+                        "y2": { "signal": "radius * sin(scale('angular', datum.Year))" },
                         "stroke": { "value": "darkgray" },
                         "strokeWidth": { "value": 1 }
                     }
                 }
             },
-            // Radial grid lines
+
             {
                 "type": "line",
                 "name": "hex-grid",
-                "from": { "data": "keys" },
+                "from": { "data": "years" },
                 "encode": {
                     "enter": {
                         "interpolate": { "value": "linear-closed" },
-                        "x": { "signal": "radius * cos(scale('angular', datum.key))" },
-                        "y": { "signal": "radius * sin(scale('angular', datum.key))" },
+                        "x": { "signal": "radius * cos(scale('angular', datum.Year))" },
+                        "y": { "signal": "radius * sin(scale('angular', datum.Year))" },
                         "stroke": { "value": "black" },
                         "strokeWidth": { "value": 1 }
                     }
                 }
             },
-            // Labels for the radial axes
+            
             {
                 "type": "text",
                 "name": "key-label",
-                "from": { "data": "keys" },
+                "from": { "data": "years" },
                 "zindex": 1,
                 "encode": {
                     "enter": {
-                        "x": { "signal": "(radius + 5) * cos(scale('angular', datum.key))" },
-                        "y": { "signal": "(radius + 5) * sin(scale('angular', datum.key))" },
-                        "text": { "field": "key" },
+                        "x": { "signal": "(radius + 5) * cos(scale('angular', datum.Year))" },
+                        "y": { "signal": "(radius + 5) * sin(scale('angular', datum.Year))" },
+                        "text": { "field": "Year" },
                         "align": [
-                            { "test": "abs(scale('angular', datum.key)) > PI / 2", "value": "right" },
+                            { "test": "abs(scale('angular', datum.Year)) > PI / 2", "value": "right" },
                             { "value": "left" }
                         ],
                         "baseline": [
-                            { "test": "scale('angular', datum.key) > 0", "value": "top" },
-                            { "test": "scale('angular', datum.key) == 0", "value": "middle" },
+                            { "test": "scale('angular', datum.Year) > 0", "value": "top" },
+                            { "test": "scale('angular', datum.Year) == 0", "value": "middle" },
                             { "value": "bottom" }
                         ],
                         "fill": { "value": "black" },
@@ -159,18 +170,18 @@ const chartSpec = (selectedYear, selectedRegion) => {
     };
 };
 
-let selectedYear = "All";
+let selectedKey = "All";
 let selectedRegion = "New South Wales";
 
 function renderChart() {
-    vegaEmbed('#chartSpec', chartSpec(selectedYear, selectedRegion)).catch(console.error);
+    vegaEmbed('#chartSpec', chartSpec(selectedKey, selectedRegion)).catch(console.error);
 }
 
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', (e) => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         e.target.classList.add('active');
-        selectedYear = e.target.getAttribute('data-year');
+        selectedKey = e.target.getAttribute('data-sector');
         renderChart();
     });
 });
