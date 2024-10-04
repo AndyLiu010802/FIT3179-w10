@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commodity Distribution Map</title>
+    <title>Employment at end of July 2020-2023</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -14,12 +14,25 @@
             background-color: #feecc2;
         }
 
+
+        #chart,
+        #chart2 {
+            width: 500px;
+            height: 500px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
         .tab-container {
             display: flex;
             border-radius: 20px;
             padding: 5px;
             justify-content: space-around;
-            width: 300px;
+            width: 400px;
             margin: 50px auto;
         }
 
@@ -47,29 +60,42 @@
 </head>
 
 <body>
-    <h1>Austrlia Mining Commodity Distribution</h1>
-
-
-    <div id="chart"></div>
-
-    <div class="tab-container"></div>
-    <label for="yearSelection">Select Year:</label>
-    <div class="tab" id="tab1" onclick="selectTab('tab1')">2020-2021</div>
-    <div class="tab" id="tab2" onclick="selectTab('tab2')">2021-2022</div>
-    <div class="tab active" id="tab3" onclick="selectTab('tab3')">2022-2023</div>
+    <h1>Key Data of Mining by State and Territories</h1>
+    <div class="chart-container">
+        <div id="chart"></div>
+        <div id="chart2"></div>
+        <div id="chart3"></div>
     </div>
 
+    <div class="tab-container">
+        <div class="tab active" id="tabAll" onclick="selectTab('tabAll', 'All')">All</div>
+        <div class="tab" id="tab1" onclick="selectTab('tab1', '2020-21')">2020-2021</div>
+        <div class="tab" id="tab2" onclick="selectTab('tab2', '2021-22')">2021-2022</div>
+        <div class="tab" id="tab3" onclick="selectTab('tab3', '2022-23')">2022-2023</div>
+
+    </div>
 
     <script src="chart.js"></script>
+    <script src="chart2.js"></script>
+    <script src="chart3.js"></script>
+
     <script>
-        function selectTab(tabId) {
+        function selectTab(tabId, year) {
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => {
                 tab.classList.remove('active');
             });
 
             document.getElementById(tabId).classList.add('active');
+
+            updateChart(year);
+            updateChart2(year);
+            updateChart3(year);
         }
+
+        updateChart('All');
+        updateChart2('All');
+        updateChart3('All');
     </script>
 </body>
 

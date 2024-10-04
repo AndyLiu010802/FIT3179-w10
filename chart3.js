@@ -1,4 +1,4 @@
-const chart = {
+const chart3 = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "Radar chart with hexagonal grid",
     "width": 500,
@@ -21,7 +21,7 @@ const chart = {
             "range": { "signal": "[0, radius]" },
             "zero": true,
             "nice": false,
-            "domain": { "data": "table", "field": "Employment_at_end_of_June" },
+            "domain": { "data": "table", "field": "Sales_and_service_income" },
             "domainMin": 0
         },
         {
@@ -55,8 +55,8 @@ const chart = {
                     "encode": {
                         "enter": {
                             "interpolate": { "value": "linear-closed" },
-                            "x": { "signal": "scale('radial', datum['Employment_at_end_of_June']) * cos(scale('angular', datum.Region))" },
-                            "y": { "signal": "scale('radial', datum['Employment_at_end_of_June']) * sin(scale('angular', datum.Region))" },
+                            "x": { "signal": "scale('radial', datum['Sales_and_service_income']) * cos(scale('angular', datum.Region))" },
+                            "y": { "signal": "scale('radial', datum['Sales_and_service_income']) * sin(scale('angular', datum.Region))" },
                             "stroke": { "scale": "color", "field": "Year" },
                             "strokeWidth": { "value": 1 },
                             "fill": { "scale": "color", "field": "Year" },
@@ -71,12 +71,12 @@ const chart = {
                     "encode": {
                         "enter": {
                             "size": { "value": 50 },
-                            "x": { "signal": "scale('radial', datum['Employment_at_end_of_June']) * cos(scale('angular', datum.Region))" },
-                            "y": { "signal": "scale('radial', datum['Employment_at_end_of_June']) * sin(scale('angular', datum.Region))" },
+                            "x": { "signal": "scale('radial', datum['Sales_and_service_income']) * cos(scale('angular', datum.Region))" },
+                            "y": { "signal": "scale('radial', datum['Sales_and_service_income']) * sin(scale('angular', datum.Region))" },
                             "fill": { "scale": "color", "field": "Year" },
                             "stroke": { "value": "black" },
                             "strokeWidth": { "value": 1 },
-                            "tooltip": { "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Employment': datum['Employment_at_end_of_June']}" }
+                            "tooltip": { "signal": "{'Region': datum.Region, 'Year': datum.Year, 'Sales and service income': datum['Sales_and_service_income']}" }
                         }
                     }
                 }
@@ -141,8 +141,8 @@ const chart = {
     ],
 };
 
-function updateChart(year) {
-    const updatedSpec = { ...chart };
+function updateChart3(year) {
+    const updatedSpec = { ...chart3 };
 
     if (year === 'All') {
         updatedSpec.data = [
@@ -154,7 +154,8 @@ function updateChart(year) {
             {
                 "name": "keys",
                 "source": "table",
-                "transform": [{ "type": "aggregate", "groupby": ["Region"] }]
+                "transform": [{ "type": "aggregate", "groupby": ["Region"] },
+            ]
             }
         ];
     } else {
@@ -175,5 +176,5 @@ function updateChart(year) {
         ];
     }
 
-    vegaEmbed('#chart', updatedSpec).catch(console.error);
+    vegaEmbed('#chart3', updatedSpec).catch(console.error);
 }
