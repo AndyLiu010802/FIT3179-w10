@@ -1,6 +1,6 @@
 const chart = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "description": "Radar chart with key data points for various regions",
+    "description": "Radar chart with key data points for Employment, Wages, and Sales",
     "width": 500,
     "height": 500,
     "padding": 100,
@@ -149,21 +149,6 @@ function updateChart(year, region) {
             "format": { "type": "json" },
             "transform": [
                 { "type": "filter", "expr": `datum['Year'] == '${year}' && datum['Region'] == '${region}'` },
-                {
-                    "type": "formula",
-                    "as": "Employment_at_end_of_June",
-                    "expr": "datum['key Data'].Employment_at_end_of_June"
-                },
-                {
-                    "type": "formula",
-                    "as": "Wages_and_salaries",
-                    "expr": "datum['key Data'].Wages_and_salaries"
-                },
-                {
-                    "type": "formula",
-                    "as": "Sales_and_service_income",
-                    "expr": "datum['key Data'].Sales_and_service_income"
-                },
                 {
                     "type": "fold",
                     "fields": ["Employment_at_end_of_June", "Wages_and_salaries", "Sales_and_service_income"],
