@@ -13,7 +13,7 @@ const chart = {
             "type": "point",
             "range": { "signal": "[-PI, PI]" },
             "padding": 0.5,
-            "domain": { "data": "table", "field": "Region" }
+            "domain": { "data": "table", "field": "Key data" }
         },
         {
             "name": "radial",
