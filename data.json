@@ -1,381 +1,380 @@
 [
     {
-      "Region": "New South Wales",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 23014
+        "Region": "New South Wales",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 23014
     },
     {
-      "Region": "New South Wales",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 3327
+        "Region": "New South Wales",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 3327
     },
     {
-      "Region": "New South Wales",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 30117
+        "Region": "New South Wales",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 30117
     },
     {
-      "Region": "New South Wales",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 23329
+        "Region": "New South Wales",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 23329
     },
     {
-      "Region": "New South Wales",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 3416
+        "Region": "New South Wales",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 3416
     },
     {
-      "Region": "New South Wales",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 48387
+        "Region": "New South Wales",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 48387
     },
     {
-      "Region": "New South Wales",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 24720
+        "Region": "New South Wales",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 24720
     },
     {
-      "Region": "New South Wales",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 3719
+        "Region": "New South Wales",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 3719
     },
     {
-      "Region": "New South Wales",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 74589
+        "Region": "New South Wales",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 74589
     },
     {
-      "Region": "Victoria",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 5571
+        "Region": "Victoria",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 5571
     },
     {
-      "Region": "Victoria",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 922
+        "Region": "Victoria",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 922
     },
     {
-      "Region": "Victoria",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 7413
+        "Region": "Victoria",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 7413
     },
     {
-      "Region": "Victoria",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 5862
+        "Region": "Victoria",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 5862
     },
     {
-      "Region": "Victoria",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 878
+        "Region": "Victoria",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 878
     },
     {
-      "Region": "Victoria",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 9368
+        "Region": "Victoria",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 9368
     },
     {
-      "Region": "Victoria",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 5568
+        "Region": "Victoria",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 5568
     },
     {
-      "Region": "Victoria",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 850
+        "Region": "Victoria",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 850
     },
     {
-      "Region": "Victoria",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 9301
+        "Region": "Victoria",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 9301
     },
     {
-      "Region": "Queensland",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 36616
+        "Region": "Queensland",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 36616
     },
     {
-      "Region": "Queensland",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 5453
+        "Region": "Queensland",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 5453
     },
     {
-      "Region": "Queensland",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 56196
+        "Region": "Queensland",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 56196
     },
     {
-      "Region": "Queensland",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 35781
+        "Region": "Queensland",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 35781
     },
     {
-      "Region": "Queensland",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 5461
+        "Region": "Queensland",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 5461
     },
     {
-      "Region": "Queensland",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 96862
+        "Region": "Queensland",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 96862
     },
     {
-      "Region": "Queensland",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 39421
+        "Region": "Queensland",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 39421
     },
     {
-      "Region": "Queensland",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 6110
+        "Region": "Queensland",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 6110
     },
     {
-      "Region": "Queensland",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 126968
+        "Region": "Queensland",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 126968
     },
     {
-      "Region": "South Australia",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 8174
+        "Region": "South Australia",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 8174
     },
     {
-      "Region": "South Australia",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 1223
+        "Region": "South Australia",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 1223
     },
     {
-      "Region": "South Australia",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 8801
+        "Region": "South Australia",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 8801
     },
     {
-      "Region": "South Australia",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 9018
+        "Region": "South Australia",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 9018
     },
     {
-      "Region": "South Australia",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 1330
+        "Region": "South Australia",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 1330
     },
     {
-      "Region": "South Australia",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 9491
+        "Region": "South Australia",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 9491
     },
     {
-      "Region": "South Australia",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 9494
+        "Region": "South Australia",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 9494
     },
     {
-      "Region": "South Australia",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 1480
+        "Region": "South Australia",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 1480
     },
     {
-      "Region": "South Australia",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 10978
+        "Region": "South Australia",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 10978
     },
     {
-      "Region": "Western Australia",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 70133
+        "Region": "Western Australia",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 70133
     },
     {
-      "Region": "Western Australia",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 11758
+        "Region": "Western Australia",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 11758
     },
     {
-      "Region": "Western Australia",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 214604
+        "Region": "Western Australia",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 214604
     },
     {
-      "Region": "Western Australia",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 77255
+        "Region": "Western Australia",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 77255
     },
     {
-      "Region": "Western Australia",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 12941
+        "Region": "Western Australia",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 12941
     },
     {
-      "Region": "Western Australia",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 234379
+        "Region": "Western Australia",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 234379
     },
     {
-      "Region": "Western Australia",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 85746
+        "Region": "Western Australia",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 85746
     },
     {
-      "Region": "Western Australia",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 14798
+        "Region": "Western Australia",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 14798
     },
     {
-      "Region": "Western Australia",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 264468
+        "Region": "Western Australia",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 264468
     },
     {
-      "Region": "Tasmania",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 1647
+        "Region": "Tasmania",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 1647
     },
     {
-      "Region": "Tasmania",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 200
+        "Region": "Tasmania",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 200
     },
     {
-      "Region": "Tasmania",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 1084
+        "Region": "Tasmania",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 1084
     },
     {
-      "Region": "Tasmania",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 1693
+        "Region": "Tasmania",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 1693
     },
     {
-      "Region": "Tasmania",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 207
+        "Region": "Tasmania",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 207
     },
     {
-      "Region": "Tasmania",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 1450
+        "Region": "Tasmania",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 1450
     },
     {
-      "Region": "Tasmania",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 1757
+        "Region": "Tasmania",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 1757
     },
     {
-      "Region": "Tasmania",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 215
+        "Region": "Tasmania",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 215
     },
     {
-      "Region": "Tasmania",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 1415
+        "Region": "Tasmania",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 1415
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2020-21",
-      "key": "Employment_at_end_of_June",
-      "value": 3298
+        "Region": "Northern Territory",
+        "Year": "2020-21",
+        "key": "Employment at end of June",
+        "value": 3298
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2020-21",
-      "key": "Wages_and_salaries",
-      "value": 564
+        "Region": "Northern Territory",
+        "Year": "2020-21",
+        "key": "Wages and salaries",
+        "value": 564
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2020-21",
-      "key": "Sales_and_service_income",
-      "value": 9161
+        "Region": "Northern Territory",
+        "Year": "2020-21",
+        "key": "Sales and service income",
+        "value": 9161
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2021-22",
-      "key": "Employment_at_end_of_June",
-      "value": 3457
+        "Region": "Northern Territory",
+        "Year": "2021-22",
+        "key": "Employment at end of June",
+        "value": 3457
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2021-22",
-      "key": "Wages_and_salaries",
-      "value": 557
+        "Region": "Northern Territory",
+        "Year": "2021-22",
+        "key": "Wages and salaries",
+        "value": 557
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2021-22",
-      "key": "Sales_and_service_income",
-      "value": 12476
+        "Region": "Northern Territory",
+        "Year": "2021-22",
+        "key": "Sales and service income",
+        "value": 12476
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2022-23",
-      "key": "Employment_at_end_of_June",
-      "value": 3627
+        "Region": "Northern Territory",
+        "Year": "2022-23",
+        "key": "Employment at end of June",
+        "value": 3627
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2022-23",
-      "key": "Wages_and_salaries",
-      "value": 637
+        "Region": "Northern Territory",
+        "Year": "2022-23",
+        "key": "Wages and salaries",
+        "value": 637
     },
     {
-      "Region": "Northern Territory",
-      "Year": "2022-23",
-      "key": "Sales_and_service_income",
-      "value": 15615
+        "Region": "Northern Territory",
+        "Year": "2022-23",
+        "key": "Sales and service income",
+        "value": 15615
     }
-  ]
-  
+]
