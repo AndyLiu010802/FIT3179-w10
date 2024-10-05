@@ -15,9 +15,9 @@
             overflow-x: hidden;
         }
 
-        #chart,
-        #chart2,
-        #chart3 {
+        #chartSpec,
+        #chartSpec2,
+        #chartSpec3 {
             width: 400px;
             height: 400px;
         }
@@ -75,7 +75,7 @@
 </head>
 
 <body>
-    <h1>Austrlia Mining Commodity Distribution</h1>
+    <h1>Australia Mining Commodity Distribution</h1>
     <div id="vis"></div>
 
     <h1>Key Data of Mining by State and Territories</h1>
@@ -106,7 +106,7 @@
     </div>
 
     <div class="chart-container">
-        <div>
+        <div id="chart1">
             <div id="chartSpec"></div>
             <div class="region-select">
                 <label for="region">Select Region: </label>
@@ -123,7 +123,7 @@
 
         </div>
 
-        <div>
+        <div id="chart2">
             <div id="chartSpec2"></div>
             <div class="region-select2">
                 <label for="region2">Select Region: </label>
@@ -140,7 +140,7 @@
 
         </div>
 
-        <div>
+        <div id="chart3">
             <div id="chartSpec3"></div>
             <div class="region-select3">
                 <label for="region3">Select Region: </label>
@@ -158,6 +158,37 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab");
+            const chart1 = document.getElementById("chart1");
+            const chart2 = document.getElementById("chart2");
+            const chart3 = document.getElementById("chart3");
+
+            function showChart(sector) {
+                if (sector === "All") {
+                    chart1.style.display = "block";
+                    chart2.style.display = "none";
+                    chart3.style.display = "none";
+                } else {
+                    chart1.style.display = "block";
+                    chart2.style.display = "block";
+                    chart3.style.display = "block";
+                }
+            }
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", function () {
+                    document.querySelector(".tab.active").classList.remove("active");
+                    this.classList.add("active");
+                    const sector = this.getAttribute("data-sector");
+                    showChart(sector);
+                });
+            });
+
+            showChart("All");
+        });
+    </script>
     <script src="chart.js"></script>
     <script src="chart2.js"></script>
     <script src="chart3.js"></script>
